@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ytc.mapper.NewsTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.ytc.model.NewsType" >
+    <id column="newstypeid" property="newstypeid"/>
+    <result column="newstypename" property="newstypename"/>
+    <association property="news" javaType="com.ytc.model.News">
+      <id column="newsid" property="newsid"/>
+      <result column="newstitle" property="newstitle"/>
+      <result column="newscontent" property="newscontent"/>
+      <result column="newsphotourl" property="newsphotourl"/>
+      <result column="newstypeid" property="newstypeid"/>
+    </association>
+  </resultMap>
+
+  <select id="queryNewsTypeList" resultMap="BaseResultMap"  >
+    select * from newstype nt left join news n on nt.newstypeid=n.newstypeid
+  </select>
+
+</mapper>

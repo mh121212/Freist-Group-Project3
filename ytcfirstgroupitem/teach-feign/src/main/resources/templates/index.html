@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<link type="text/css" rel="stylesheet" href="css/index.css"/>
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="js/flash.js"></script>
+<script type="text/javascript" src="js/fenclass.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //为标题添加单击事件
+        $("#menu>span").click(function(){
+            //隐藏所有内容
+            $("#menu>div").hide();
+            //显示选中标题的内容
+            $("#div_" + this.id).show();
+        });
+        $("#menubar li").click(function(){
+            var url = $(this).find("a").attr("href");
+            document.location.href = url;
+        });
+        $("#menubar li").hover(function(){
+            $(this).find(".menuinfo").slideDown();
+        },function(){
+            $(this).find(".menuinfo").slideUp();
+        });
+
+    });
+</script>
+<style type="text/css">
+    #nav{ width:1000px; height:33px; overflow:hidden; margin-top:1px; margin-bottom:5px; margin-left: 176px;}
+    #nav ul{ list-style-type:none; display:block;}
+    #menubar li.line{ background:url(images/navline.jpg) no-repeat; width:1px; height:33px;}
+    #menubar li{ width:165.5px; text-align:center; height:33px; line-height:33px; float:left; background:url(images/nav.jpg) no-repeat; overflow:hidden;}
+    #menubar li:hover{ background:url(images/navon.jpg) no-repeat;}
+    #menubar li a{ color:#ffffff; font-size:13px;}
+    .menuinfo{ cursor:hand; background-color:#404040; color:#ffffff; width:155px; height:auto; min-height:30px; overflow:hidden; padding:5px; display:none; position:absolute; z-index:1;}
+    .menuinfo a{ font-size:12px;}
+</style>
+</head>
+<body>
+<div class="top">
+    <div class="login" style="border: solid 1px red;">
+        <div class="z"><a href="reg.html">注册</a></div>
+        <div class="d"><a href="login.html">登录</a></div>
+    </div>
+</div>
+
+<!--  导航开始  -->
+<div id="nav">
+    <ul id="menubar">
+        <li class="first">
+            <a href="index.html">领航首页</a>
+        </li>
+        <li class="line"></li>
+        <li class="first">
+            <a href="#">学校简介</a>
+            <div class="menuinfo">
+                <a href="#">校园介绍</a><br />
+                <a href="#">校园环境</a><br />
+                <a href="#">校园地址</a>
+            </div>
+        </li>
+        <li class="line"></li>
+        <li class="first">
+            <a href="#">热门课程</a>
+            <div class="menuinfo">
+                <a href="#">JAVA</a><br />
+                <a href="#">PHP</a><br />
+                <a href="#">大数据</a><br />
+            </div>
+        </li>
+        <li class="line"></li>
+        <li class="first">
+            <a href="#">金牌师资</a>
+            <div class="menuinfo">
+                <a href="#">JAVA课程教师</a><br />
+                <a href="#">PHP课程教师</a><br />
+                <a href="#">大数据课程教师</a><br />
+            </div>
+        </li>
+        <li class="line"></li>
+        <li class="first">
+            <a href="#">学员风采</a>
+            <div class="menuinfo">
+                <a href="#">高薪就业</a><br />
+                <a href="#">学员作品</a><br />
+            </div>
+        </li>
+        <li class="line"></li>
+        <li class="first">
+            <a href="#">专业测试</a>
+        </li>
+    </ul>
+</div><!--  导航结束  -->
+
+<div class="top2">
+    <div class="tc">
+        <!-- flash开始 -->
+        <div class="flash">
+            <div class="num">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+            <div class="container">
+                <div class="item hover">
+                    <a href="javascirpt:void(0);">
+                        <img width="1000px" height="450px" src="images/flash1.jpg"/>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="javascirpt:void(0);">
+                        <img width="1000px" height="450px" src="images/flash.jpg"/>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="javascirpt:void(0);">
+                        <img width="1000px" height="450px" src="images/flash1.jpg"/>
+                    </a>
+                </div>
+            </div>
+        </div><!-- flash结束 -->
+    </div>
+</div>
+
+
+<div class="main">
+    
+    <!--  中间的第一部分开始  -->
+    <div class="center1" style="margin-top: 8px;">
+        <div class="c1left">
+            <div class="left1">
+                <div style=" color:#414141; width:146px; padding-left:18px; font-size:14px; font-weight:bold;">高级技师/中级技师</div>
+                <div class="content1">
+                    <ul>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left2">
+                <div style=" color:#414141;  width:146px; padding-left:18px; font-size:14px; font-weight:bold;">CETTIC专业认证</div>
+                <div class="content2">
+                    <ul>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left3">
+                <div style=" color:#414141;  width:146px; padding-left:18px; font-size:14px; font-weight:bold;">资格认证</div>
+                <div class="content3">
+                    <ul>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left4">
+                <div style=" color:#414141;  width:146px; padding-left:18px; font-size:14px; font-weight:bold;">国际认证</div>
+                <div class="content4">
+                    <ul>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="left5">
+                <div style=" color:#414141;  width:146px; padding-left:18px; font-size:14px; font-weight:bold;">学历教育</div>
+                <div class="content5">
+                    <ul>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                        <li><a href="#">高级人力资源师</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="c1right">
+            <div class="weixin"><img src="images/shao.jpg" /></div>
+            <div class="weibo">
+                <div class="w1"><a href="#">新浪微博：领航职业教育</a></div>
+                <div class="w2"><a href="#">微信账号：领航职业教育</a></div>
+            </div>
+        </div>
+    </div><!--  中间的第一部分结束  -->
+    
+    <!--  中间的第二部分开始  -->
+    <div class="center2">
+        <img width="1000px" height="100px" src="images/heng.jpg" />
+    </div>
+    <!--  中间的第二部分结束  -->
+    
+    
+    <!--  中间的第三部分开始  -->
+    <div class="center3">
+    
+        <div class="c3left">
+            <div class="lefttitle">
+                <div style="float:left; margin-top:10px; margin-left:10px;">
+                    <img src="images/xwzx.jpg" />
+                </div>
+                <div style="float:left; margin-left:178px; margin-top:20px;"><a href="#"><img src="images/more.jpg" /></a></div>
+            </div>
+            
+            <div class="content">
+            
+                <div class="fenclass">
+                    <ul>
+                        <li>企业动态</li>
+                        <li>行业资讯</li>
+                        <li>最新资讯</li>
+                    </ul>
+                </div>
+                
+                <div class="news">
+                    <div style="margin-top:5px;">
+                        <ul>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/dian.jpg" />人力资源六大模块职能联系</a></div>
+                                <div class="span">[2013-10-03]</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/dian.jpg" />人力资源六大模块联系</a></div>
+                                <div class="span">[2013-10-03]</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/dian.jpg" />人力资源六大模块职能联系</a></div>
+                                <div class="span">[2013-10-03]</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/dian.jpg" />人力资源六大模块职能联系</a></div>
+                                <div class="span">[2013-10-03]</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/dian.jpg" />人力资源六大模块职能联系</a></div>
+                                <div class="span">[2013-10-03]</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="margin-top:15px;" class="hide">
+                        行业资讯
+                    </div>
+                    <div style="margin-top:15px;" class="hide">
+                        最新资讯
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="c3center">
+            <div class="centertitle">
+                <div style="float:left; margin-top:10px; margin-left:10px;">
+                    <img src="images/zxkk.jpg" />
+                </div>
+                <div style="float:left; margin-left:175px; margin-top:20px;"><a href="#"><img src="images/more.jpg" /></a></div>
+            </div>
+            <div class="content">
+                <div style="float:left; margin-left:30px; margin-top:48px;"><img src="images/tree.jpg" /></div>
+                <div class="cli">
+                    <ul>
+                        <li>人大校区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;营销一130310A</li>
+                        <li>人大校区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;营销一130310A</li>
+                        <li>人大校区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;营销一130310A</li>
+                        <li>人大校区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;营销一130310A</li>
+                        <li>人大校区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;营销一130310A</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="c3right">
+            <div class="righttitle">
+                <div style="float:left; margin-top:10px; margin-left:10px;">
+                    <img src="images/tpxw.jpg" />
+                </div>
+            </div>
+            <!-- flash开始 -->
+            <div class="flash">
+                <div class="num">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                </div>
+                <div class="container">
+                    <div class="item hover">
+                        <a href="javascirpt:void(0);">
+                            <img width="310px" height="150px" src="images/flash1.jpg"/>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="javascirpt:void(0);">
+                            <img width="310px" height="150px" src="images/flash.jpg"/>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="javascirpt:void(0);">
+                            <img width="310px" height="150px" src="images/flash1.jpg"/>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="javascirpt:void(0);">
+                            <img width="310px" height="150px" src="images/flash1.jpg"/>
+                        </a>
+                    </div>
+                </div>
+            </div><!-- flash结束 -->
+        </div>
+        
+    </div>
+    <!--  中间的第三部分结束  -->
+    
+    
+    <!--  中间的第三部分开始  -->
+    <div class="center4" style="border: solid 1px red;">
+        <ul>
+            <li><a href="#"><img src="images/zxxx.jpg"/></a></li>
+            <li><a href="#"><img src="images/zxcs.jpg"/></a></li>
+            <li><a href="#"><img src="images/zlxz.jpg"/></a></li>
+            <li><a href="#"><img src="images/kfzx.jpg"/></a></li>
+            <li><a href="#"><img src="images/szkt.jpg"/></a></li>
+        </ul>
+    </div>
+    <!--  中间的第三部分结束  -->
+    
+</div>
+
+<div class="bottom">
+    <div class="bc">
+        <div style="margin-left:15px; margin-top:10px; float:left;"><img src="images/bottomlogo.jpg" /></div>
+        <div class="bcright">
+            <div class="bcli">
+                <ul>
+                    <li><a href="#">集团首页</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">关于领航</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">加盟合作</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">法律申明</a></li>
+                </ul>
+            </div>
+            <div style="float:left; margin-left:20px; color:#7f7f7f;">全国免费咨询电话：400-098-1616</div>
+            <div class="bcbottom">
+                版权所有  因特驰第一项目小组  张红 程文斌 杨志斌 孟浩 韩小杰 周勇
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

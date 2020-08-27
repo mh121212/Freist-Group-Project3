@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ytc.mapper.RegMapper" >
+  <resultMap id="BaseResultMap" type="com.ytc.model.User" >
+    <id column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="nickname" property="nickname" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="userphone" property="userphone" jdbcType="VARCHAR" />
+    <result column="userpwd" property="userpwd" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    userid, nickname, username, userphone, userpwd
+  </sql>
+
+  <insert id="RegAdd" parameterType="com.ytc.model.User" >
+    insert into user ( nickname, username,
+      userphone, userpwd)
+    values ( #{nickname,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR},
+      #{userphone,jdbcType=VARCHAR}, #{userpwd,jdbcType=VARCHAR})
+  </insert>
+
+</mapper>

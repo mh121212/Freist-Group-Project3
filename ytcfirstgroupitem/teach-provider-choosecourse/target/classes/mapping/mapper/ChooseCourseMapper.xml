@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ytc.mapper.ChooseCourseMapper">
+    <resultMap id="BaseResultMap" type="com.ytc.model.ChooseCourse">
+        <id column="choosecourseid" property="choosecourseid"/>
+        <result column="userid" property="userid"/>
+        <result column="teacherid" property="teacherid"/>
+        <result column="courseid" property="courseid"/>
+    </resultMap>
+
+    <insert id="addChooseCourse" parameterType="com.ytc.model.ChooseCourse">
+        insert into choosecourse(userid,teacherid,courseid,orderno) values (#{userid},#{teacherid},#{courseid},#{orderno});
+    </insert>
+
+
+</mapper>

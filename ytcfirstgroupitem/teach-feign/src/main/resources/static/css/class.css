@@ -1,0 +1,84 @@
+/* CSS Document */
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, tr, td {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+body {
+	background-color:skyblue;    font-size: 12px;
+    font-family: "宋体", Arial, Helvetica;
+    width:100%;
+    height:100%;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: none;
+    padding:0px;
+    margin:0px;
+}
+
+/**********外围最主要的*******/
+.main{ width:1006px; height:auto; overflow:hidden; margin:0px auto;}
+.top{ width:1000px; height:75px; overflow:hidden; background:url(../images/top.jpg) no-repeat; margin:0px auto;}
+
+.tutu{ width:1000px; height:132px; overflow:hidden; background:url(../images/tutu.jpg) no-repeat; margin-top:7px; margin-left: 3px;}
+.tutu .tutu1{ width:188px; height:113px; margin-left:11px; margin-top:13px;}
+
+.center{ width:1006px; height:auto; overflow:hidden;}
+
+
+.center .centerright{ height:auto; float:left; margin-left:10px; margin-top:10px; width:796px; overflow:hidden;}
+.center .centerright .c1{ width:100%; overflow:hidden; height:327px; overflow:hidden;}
+.center .centerright .c1 .c1left{ float:left; width:280px; height:327px; overflow:hidden; background:url(../images/classbor1.jpg) no-repeat;}
+.center .centerright .c1 .c1right{ float:left; overflow:hidden; width:505px; height:326px; margin-left:8px; background:url(../images/shu.jpg) no-repeat;}
+
+.center .centerright .c1 .c1left .content{ margin-top:30px; margin-left:10px;}
+.center .centerright .c1 .c1left .content ul li{ overflow:hidden; height:30px; line-height:30px;}
+.center .centerright .c1 .c1left .content ul li .a{ float:left; width:145px; overflow:hidden;}
+.center .centerright .c1 .c1left .content ul li .a a:hover{ text-decoration:underline;}
+.center .centerright .c1 .c1left .content ul li .span{ float:left; color:#000000; overflow:hidden;}
+.center .centerright .c1 .c1left .content ul li a{ color:#000000;}
+
+.center .centerright .c2{ width:100%; overflow:hidden; height:328px; overflow:hidden; background:url(../images/classbor2.jpg) no-repeat; margin-top:15px;}
+.center .centerright .c2 .c2con1{ float:left; width:240px; margin-left:13px; margin-top:20px; overflow:hidden;}
+.center .centerright .c2 .c2con1 .con1content{ margin-top:30px;}
+.center .centerright .c2 .c2con1 .con1content ul li{ overflow:hidden; height:30px; line-height:30px;}
+.center .centerright .c2 .c2con1 .con1content ul li .a{ float:left; width:185px; overflow:hidden;}
+.center .centerright .c2 .c2con1 .con1content ul li .a a:hover{ text-decoration:underline;}
+.center .centerright .c2 .c2con1 .con1content ul li .span{ float:left; color:#000000; overflow:hidden;}
+.center .centerright .c2 .c2con1 .con1content ul li a{ color:#000000;}
+
+.center .centerright .c2 .c2con2{ float:left; width:243px; margin-left:22px; margin-top:20px; overflow:hidden;}
+.center .centerright .c2 .c2con2 .con2content{ margin-top:30px;}
+.center .centerright .c2 .c2con2 .con2content ul li{ overflow:hidden; height:30px; line-height:30px;}
+.center .centerright .c2 .c2con2 .con2content ul li .a{ float:left; width:185px; overflow:hidden;}
+.center .centerright .c2 .c2con2 .con2content ul li .a a:hover{ text-decoration:underline;}
+.center .centerright .c2 .c2con2 .con2content ul li .span{ float:left; color:#000000; overflow:hidden;}
+.center .centerright .c2 .c2con2 .con2content ul li a{ color:#000000;}
+
+.center .centerright .c2 .c2con3{ float:left; width:240px; margin-left:27px; margin-top:20px; overflow:hidden;}
+.center .centerright .c2 .c2con3 .con3content{ margin-top:30px;}
+.center .centerright .c2 .c2con3 .con3content ul li{ overflow:hidden; height:30px; line-height:30px;}
+.center .centerright .c2 .c2con3 .con3content ul li .a{ float:left; width:185px; overflow:hidden;}
+.center .centerright .c2 .c2con3 .con3content ul li .a a:hover{ text-decoration:underline;}
+.center .centerright .c2 .c2con3 .con3content ul li .span{ float:left; color:#000000; overflow:hidden;}
+.center .centerright .c2 .c2con3 .con3content ul li a{ color:#000000;}
+
+
+.center .centerright .c3{ width:100%; overflow:hidden; height:127px; overflow:hidden; margin-top:10px;}
+.center .centerright .c4{ width:100%; overflow:hidden; height:328px; overflow:hidden; background:url(../images/classbor2.jpg) no-repeat; margin-top:10px;}
+
+/**********底部*******/
+.bottom{ width:100%; height:84px; overflow:hidden; background:url(../images/shang.jpg) repeat-x; margin-top:5px;}
+.bottom .bc{ width:1000px; height:84px; overflow:hidden; margin:0px auto;}
+.bottom .bc .bcright{ margin-left:50px; margin-top:20px; float:left;  overflow:hidden;}
+.bottom .bc .bcright .bcli{ float:left;}
+.bottom .bc .bcright .bcli ul li{ float:left; width:70px; text-align:center; overflow:hidden;}
+.bottom .bc .bcright .bcli ul li a{ color:#7f7f7f;}
+.bottom .bc .bcright .bcli ul li.line{ background:url(../images/line.jpg) no-repeat; width:1px; height:12px;}
+.bottom .bc .bcright .bcli ul li a:hover{ text-decoration:underline;}
+.bottom .bc .bcright .bcbottom{ color:#7f7f7f; margin-left:11px; margin-top:30px;}

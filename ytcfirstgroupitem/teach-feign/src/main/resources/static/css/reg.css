@@ -1,0 +1,26 @@
+/* CSS Document */
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, tr, td {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+body {
+	background-color:#ffffff;
+    font-size: 12px;
+    font-family: "宋体", Arial, Helvetica;
+    width:100%;
+    height:100%;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: none;
+    padding:0px;
+    margin:0px;
+}
+
+/**********外围最主要的*******/
+.main{ height:850px; overflow:hidden; width:1024px; margin:0px auto;}

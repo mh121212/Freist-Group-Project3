@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ytc.mapper.CourseMapper" >
+  <resultMap id="BaseResultMap" type="com.ytc.model.Course" >
+    <id column="courseid" property="courseid"/>
+    <result column="coursename" property="coursename"/>
+    <result column="coursetime" property="coursetime"/>
+    <result column="courseshow" property="courseshow"/>
+    <result column="courseprice" property="courseprice"/>
+    <result column="coursetypeid" property="coursetypeid"/>
+    <result column="teacherid" property="teacherid"/>
+    <association property="courseType" javaType="com.ytc.model.CourseType">
+      <id column="courtypeid" property="courtypeid"/>
+      <result column="courtypename" property="courtypename"/>
+    </association>
+  </resultMap>
+
+  <select id="queryCourseList"  resultMap="BaseResultMap">
+    select * from course c left join coursetype ct on c.coursetypeid=ct.courtypeid
+  </select>
+
+</mapper>

@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>最新开课</title>
+<link type="text/css" rel="stylesheet" href="css/class.css"/>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//为标题添加单击事件
+		$("#menu>span").click(function(){
+			//隐藏所有内容
+			$("#menu>div").hide();
+			//显示选中标题的内容
+			$("#div_" + this.id).show();
+		});
+		$("#menubar li").click(function(){
+			var url = $(this).find("a").attr("href");
+			document.location.href = url;
+		});
+		$("#menubar li").hover(function(){
+			$(this).find(".menuinfo").slideDown();
+		},function(){
+			$(this).find(".menuinfo").slideUp();
+		});
+		
+	});
+</script>
+<style type="text/css">
+	#menu{ width:190px; margin-left:10px; min-height:700px; height:auto; background:url(images/leftbg.jpg) repeat-x; background-color:#f9f9f9; float:left;}
+	#menu span{ cursor:pointer; display:block; margin-left:20px; margin-top:45px; font-weight:bold;}
+	#menu span a{ color:#3e3e3e;}
+	#menu div{ margin-left:30px; margin-top:10px;}
+	#menu div ul li{ height:25px;}
+	#menu div ul li a{ color:#000000;}
+	#menu div ul li a:hover{ color:#3e79b7;}
+	#menu span a:hover{ color:#3e79b7;}
+	#menu .hidden{ display:none;}
+	
+	
+	#nav{ width:1000px; height:33px; overflow:hidden; margin-top: 6px; margin-left: 4px;}
+	#nav ul{ list-style-type:none; display:block;}
+	#menubar li.line{ background:url(images/navline.jpg) no-repeat; width:1px; height:33px;}
+	#menubar li{ width:165.5px; text-align:center; height:33px; line-height:33px; float:left; background:url(images/nav.jpg) no-repeat; overflow:hidden;}
+	#menubar li:hover{ background:url(images/navon.jpg) no-repeat;}
+	#menubar li a{ color:#ffffff; font-size:13px;}
+	.menuinfo{ cursor:hand; background-color:#404040; color:#ffffff; width:155px; height:auto; min-height:30px; overflow:hidden; padding:5px; display:none; position:absolute;}
+	.menuinfo a{ font-size:12px;}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+	<div class="top"></div>
+    
+    <!--  导航开始  -->
+    <div id="nav">
+    	<ul id="menubar">
+        	<li class="first">
+            	<a href="index.html">领航首页</a>
+            </li>
+            <li class="line"></li>
+        	<li class="first">
+            	<a href="#">学校简介</a>
+                <div class="menuinfo">
+                	<a href="#">校园介绍</a><br />
+                	<a href="#">校园环境</a><br />
+                	<a href="#">校园地址</a>
+                </div>
+            </li>
+            <li class="line"></li>
+        	<li class="first">
+            	<a href="#">热门课程</a>
+                <div class="menuinfo">
+                    <a href="#">JAVA</a><br />
+                    <a href="#">PHP</a><br />
+                    <a href="#">大数据</a><br />
+                </div>
+            </li>
+            <li class="line"></li>
+        	<li class="first">
+            	<a href="#">金牌师资</a>
+                <div class="menuinfo">
+                    <a href="#">JAVA课程教师</a><br />
+                    <a href="#">PHP课程教师</a><br />
+                    <a href="#">大数据课程教师</a><br />
+                </div>
+            </li>
+            <li class="line"></li>
+        	<li class="first">
+            	<a href="#">学员风采</a>
+                <div class="menuinfo">
+                    <a href="#">高薪就业</a><br />
+                    <a href="#">学员作品</a><br />
+                </div>
+            </li>
+            <li class="line"></li>
+        	<li class="first">
+            	<a href="#">专业测试</a>
+            </li>
+        </ul>
+    </div><!--  导航结束  -->
+    
+    <div class="tutu">
+    	<div class="tutu1"><img width="188px" height="113px" src="images/tutu1.jpg" /></div>
+    </div>
+    
+    <!--  中间部分开始  -->
+    <div class="center">
+    	
+        <!--  中间部分的左边部分开始  -->
+    	<div id="menu">
+        	
+            <span id="m1"><a href="#"><img src="images/jia.jpg"/>&nbsp;新闻咨询</a></span>
+            <div id="div_m1">
+            	<ul>
+                	<li><a href="#"><img src="images/jian.jpg"/>&nbsp;企业动态</a></li>
+                    <li><a href="#"><img src="images/jian.jpg"/>&nbsp;行业资讯</a></li>
+                    <li><a href="#"><img src="images/jian.jpg"/>&nbsp;最新资讯</a></li>
+                </ul>
+            </div>
+            
+            <span id="m2"><a href="#"><img src="images/jia.jpg"/>&nbsp;资料下载</a></span>
+            <div id="div_m2" class="hidden">
+                <ul>
+                	<li><a href="#"><img src="images/jian.jpg"/>&nbsp;企业动态</a></li>
+                    <li><a href="#"><img src="images/jian.jpg"/>&nbsp;行业资讯</a></li>
+                    <li><a href="#"><img src="images/jian.jpg"/>&nbsp;最新资讯</a></li>
+                </ul>
+            </div>
+            
+            <span id="m3"><a href="#"><img src="images/jia.jpg"/>&nbsp;线上学习</a></span>
+            <span id="m4"><a href="#"><img src="images/jia.jpg"/>&nbsp;在线测试</a></span>
+            <span id="m5"><a href="#"><img src="images/jia.jpg"/>&nbsp;客服中心</a></span>
+            
+        </div><!--  中间部分的左边部分结束  -->
+        
+        <!--  中间部分的右边部分开始  -->
+        <div class="centerright">
+        
+         	<div class="c1">
+            	<div class="c1left">
+                	<div style=" color:#2099e6; font-size:14px; margin-top:20px; margin-left:15px;">高级人力资源管理师开课通知</div>
+                    <div class="content">
+                    	<ul>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">高级人力资源管理师</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">高级人力资源管理师</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">高级人力资源管理师</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">高级人力资源管理师</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">高级人力资源管理师</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">高级人力资源管理师</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">高级人力资源管理师</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">高级人力资源管理师</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            	<div class="c1right"></div>
+            </div>
+            
+         	<div class="c2">
+            
+            	<div class="c2con1">
+                	<div style=" color:#2099e6; font-size:14px;">高级人力资源管理师开课通知</div>
+                    <div class="con1content">
+                    	<ul>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="c2con2">
+                	<div style=" color:#2099e6; font-size:14px;">高级人力资源管理师开课通知</div>
+                    <div class="con2content">
+                    	<ul>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="c2con3">
+                	<div style=" color:#2099e6; font-size:14px;">高级人力资源管理师开课通知</div>
+                    <div class="con3content">
+                    	<ul>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            
+         	<div class="c3">
+            	<img width="796px" height="127px" src="images/shu1.jpg" />
+            </div>
+            
+         	<div class="c2">
+            	
+                <div class="c2con1">
+                	<div style=" color:#2099e6; font-size:14px;">高级人力资源管理师开课通知</div>
+                    <div class="con1content">
+                    	<ul>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="c2con2">
+                	<div style=" color:#2099e6; font-size:14px;">高级人力资源管理师开课通知</div>
+                    <div class="con2content">
+                    	<ul>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="c2con3">
+                	<div style=" color:#2099e6; font-size:14px;">高级人力资源管理师开课通知</div>
+                    <div class="con3content">
+                    	<ul>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                            <li>
+                                <div class="a"><a href="#"><img src="images/sanjiao.jpg" />&nbsp;人大校区  140302A</a></div>
+                                <div class="span">人力二级</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        	
+        </div><!--  中间部分的右边部分结束  -->
+        
+    </div><!--  中间部分结束  -->
+    
+</div>
+
+
+<div class="bottom">
+    <div class="bc">
+        <div style="margin-left:15px; margin-top:10px; float:left;"><img src="images/bottomlogo.jpg" /></div>
+        <div class="bcright">
+            <div class="bcli">
+                <ul>
+                    <li><a href="#">集团首页</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">关于领航</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">加入我们</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">加盟合作</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">法律申明</a></li>
+                </ul>
+            </div>
+            <div style="float:left; margin-left:20px; color:#7f7f7f;">全国免费咨询电话：400-098-1616</div>
+            <div class="bcbottom">
+                COPYRIGHT  @2011-2014,HRROUTE.ORG  京ICP备10027426  版权所有  北京众合领航教育咨询有限责任公司
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

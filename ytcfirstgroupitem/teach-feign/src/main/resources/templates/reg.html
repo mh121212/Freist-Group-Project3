@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页面</title>
+	<link type="text/css" rel="stylesheet" href="css/reg.css"/>
+</head>
+<body>
+<div class="main">
+	<div style="float:left;">
+		<div class="kuai"></div>
+		<div class="form">
+			<form action="../User.php?op=reg" method="post" name="form1" onsubmit="return checkForm();">
+				<table height="480px" width="500px" border="0">
+					<tr>
+						<td style="text-align:right; width:70px;">用户名</td>
+						<td>
+							&nbsp;<input style="width:200px; height:25px;" type="text" name="username" onblur="checkAccount()"/>
+							<span id="accountSpan" style="font-size:12px;color:skyblue;">*</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:right;">姓名</td>
+						<td>
+							&nbsp;<input style="width:200px; height:25px;" type="text" name="relname" onblur="checkrelname()"/>
+							<span id="relnameSpan" style="font-size:12px;color:skyblue;">*</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:right;">手机号码</td>
+						<td>
+							&nbsp;<input style="width:200px; height:25px;" type="text" name="tell" onblur="checktell()"/>
+							<span id="tellSpan" style="font-size:12px;color:skyblue;">*</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:right;">验证码</td>
+						<td>&nbsp;<input style="width:80px; height:25px;" type="text" name="code" id="code"/>
+							<img onclick="this.src='../yz.php?'+Math.random()" src="../yz.php" /></td>
+					</tr>
+					<tr>
+						<td style="text-align:right;">密码</td>
+						<td>
+							&nbsp;<input style="width:200px; height:25px;" type="password" name="password" onblur="checkPassword()"/>
+							<span id="password1Span" style="font-size:12px;color:skyblue;">*</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align:right;">确认密码</td>
+						<td>
+							&nbsp;<input style="width:200px; height:25px;" type="password" name="password1" onblur="checkPassword1()"/>
+							<span id="password2Span" style="font-size:12px;color:skyblue;"></span>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>&nbsp;<input type="checkbox" value="同意领航教育的用户协议" name="agree" checked="checked"/>同意领航教育的用户协议</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>&nbsp;<input style=" background:url(images/regbtn.jpg) no-repeat; width:140px; height:36px; cursor:pointer;" type="submit"  value="" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div class="wydl"><a href="login.php" style="cursor:pointer;"><img src="images/wydl.jpg"/></a></div>
+	</div>
+</div>
+</body>
+</html>

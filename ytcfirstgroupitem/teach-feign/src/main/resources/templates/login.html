@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎您来到登录页面</title>
+    <link type="text/css" rel="stylesheet" href="css/login.css"/>
+</head>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<body>
+<div class="main">
+    <div class="form">
+        <form id="fom">
+            <table height="250px">
+                <tr>
+                    <td><input style="width:340px; height:45px;" type="text" id="name" name="userName"/></td>
+                </tr>
+                <tr>
+                    <td><input style="width:340px; height:45px;" type="password" id="pwd" name="userPassword"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="float:left; cursor: pointer;" onclick="login()">
+                            <img src="images/other/loginbut.jpg"/>
+                        </div>
+                        <div style="float:left; margin-left:30px; margin-top:15px;"><a style=" font-size:22px; font-weight:bold; color:#7f7f7f;" href="reg.html">注册账号</a></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function login(){
+
+        var name=$("#name").val();
+        if(name==null || name==''){
+            alert("用户名不能为空");
+            return ;
+        }else{
+        }
+        var pwd=$("#pwd").val();
+        if(pwd==null || pwd==''){
+            alert("密码不能为空");
+            return ;
+        }else {
+        }
+
+        //发起登录ajax请求
+        $.ajax({
+            url:"/user/login",
+            type:"post",
+            data:$("#fom").serialize(),
+            dataType:"json",
+            success:function(data){
+                if(data=="1"){
+                    //$("#sp1").html("<font color='red'>用户名错误</font>");
+                    alert("用户名错误");
+                    return false;
+                }else{
+                    //$("#sp1").html("<font color='green'>√</font>");
+                }
+                if(data=="2"){
+                    //$("#sp2").html("<font color='red'>密码错误</font>");
+                    alert("密码错误");
+                    return false;
+                }else{
+                    //$("#sp2").html("<font color='green'>√</font>");
+                }
+                if(data="3"){
+                    alert("登录成功");
+                    location.href="/user/toIndex";
+                }
+            },error:function(){
+                alert("登录失败");
+            }
+        })
+    }
+</script>
+</html>
